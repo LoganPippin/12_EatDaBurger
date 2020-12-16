@@ -14,6 +14,10 @@
 
 It is a web application that allows you to create/add burgers to the list in the database and then update them to be eaten.
 
+## Screenshots
+
+![Deployed app](./public/assets/img/DA.png)
+
 ## Installation
 
 you need to install express, mysql, and express-handlebars.
