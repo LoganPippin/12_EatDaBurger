@@ -23,7 +23,7 @@ $(function () {
 
     const newBurger = {
       burger_name: $("#ca").val().trim(),
-      devoured: false,
+      devoured: 0,
     };
 
     console.log(newBurger);
