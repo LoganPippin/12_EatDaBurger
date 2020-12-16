@@ -1,29 +1,35 @@
-<h1>Eat Da Burger!</h1>
 
-<h2>Burgers!</h2>
+<div class="row">
 
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      <li>
-          {{burger_name}}
-          	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">Eat Da Burger</button>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
+  <div class="col-6">  
+    <h2>Burgers!</h2>
+    <ul class="list-group">
+      {{#each burger}}
+        {{#unless devoured}}
+          <li class="list-group-item">
+              {{burger_name}}
+                <button class="change-devour btn btn-danger" data-id="{{id}}" data-newdevour="{{devoured}}">Eat Da Burger</button>
+          </li>
+        {{/unless}}
+      {{/each}}
+      </ul>
+  </div>
 
-<h2>Devoured Burgers!</h2>
+  <div class="col-6">
+      <h2>Devoured Burgers!</h2>
 
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-      <li>
-          {{burger_name}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
+  <ul class="list-group">
+    {{#each burger}}
+      {{#if devoured}}
+        <li class="list-group-item disabled" aria-disabled="true">
+            {{burger_name}}
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+  </div>
+
+</div>
 
 <h2>Add a burger</h2>
 <form class="create-form">
@@ -33,5 +39,5 @@
     <input type="text" id="ca" burger_name="burger_name">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button type="submit" class="btn btn-success">Add Burger</button>
 </form>

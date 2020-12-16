@@ -15,3 +15,9 @@ li {
 body {
   background-color: teal;
 }
+
+.center {
+  margin: auto;
+  width: 150px;
+  padding: 10px;
+}
